@@ -49,8 +49,11 @@
                                     </label>
                                 </div>
                             </div>
+                        </div>                        
+                        <div class="form-group row">
+                        <a href="/login/google" class="btn btn-block btn-social-icon btn-google">
+                            <span class="fa fa-google"></span> Sign in with Google</a>
                         </div>
-
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
                                 <button type="submit" class="btn btn-primary">

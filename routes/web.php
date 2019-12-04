@@ -16,10 +16,12 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+Route::get('/login/google', 'Auth\LoginController@redirectToGoogle');
+Route::get('/login/google/callback', 'Auth\LoginController@receiveDataGoogle');
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-Route::get('/produtos/cadastrar', 'ProductController@viewFormRegister');
+Route::get('/produtos/cadastrar', 'ProductController@viewFormRegister')->middleware('checkuser');
 Route::post('/produtos/cadastrar', 'ProductController@create');
 
 Route::get('/produtos/atualizar/{id?}', 'ProductController@viewFormUpdate');

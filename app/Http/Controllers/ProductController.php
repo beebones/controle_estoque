@@ -23,7 +23,7 @@ class ProductController extends Controller
         return view('products.formRegister', ["result"=>$result]);
     }
 
-    public function viewForm(Request $request) {
+    public function viewFormRegister(Request $request) {
         return view('products.formRegister');
     }
 
